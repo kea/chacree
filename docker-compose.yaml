@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    image: phpswoole/swoole
+    environment:
+      AUTORELOAD_PROGRAMS: "swoole"
+    ports:
+      - 9501:9501
+    volumes:
+      - .:/var/www
+      - ./docker/swoole.conf:/etc/supervisor/service.d/swoole.conf

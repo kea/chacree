@@ -1,0 +1,28 @@
+{
+    "name": "kea/chacree",
+    "description": "Chat server and client with Swoole and Vue",
+    "type": "project",
+    "require": {
+        "ext-sodium": "*",
+        "lcobucci/jwt": "^4.1",
+        "monolog/monolog": "^2.3",
+        "ramsey/uuid": "^4.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kea\\Chacri\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Manuel Baldassarri",
+            "email": "manuel@baldassarri.me"
+        }
+    ],
+    "require-dev": {
+        "swoole/ide-helper": "@dev",
+        "vimeo/psalm": "^4.10",
+        "phpunit/phpunit": "^9.5"
+    }
+}

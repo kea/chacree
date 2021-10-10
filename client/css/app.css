@@ -1,0 +1,154 @@
+body {
+    background-color: #230d08;
+    background-size: cover;
+    min-height: 100vh;
+    color: #d4d1c3;
+}
+
+.channel-content {
+    background-color: #411910;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-title {
+    background-color: #230d08;
+    width: 100%;
+}
+
+.sidebar {
+    padding: 1.5rem;
+}
+
+.image {
+    margin-right: 1em;
+}
+
+.message-form {
+    flex-shrink: 0;
+}
+
+.messages {
+    flex: 1;
+    overflow: hidden scroll;
+    scrollbar-width: auto;
+}
+
+.chatfield {
+    background: lightgrey;
+    color: #411910;
+    border-radius: 0 10px 10px 10px;
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+.self .chatfield {
+    background: #d76b2b;
+    color: white;
+}
+
+.username {
+    font-weight: bold;
+    line-height: 1;
+    color: #ce4b2d;
+}
+
+.self .username {
+    color: #411910;
+}
+
+.date {
+    color: rgba(65, 25, 16, 0.33);
+    font-size: 0.8rem;
+    line-height: 1;
+    padding-left: 1em;
+}
+
+.self .date {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.subtitle .icon.is-left {
+    margin-right: 0.75rem;
+}
+
+/* bulma */
+
+.button.is-primary {
+    background-color: #ce4b2d;
+    color: #fff5e9;
+}
+
+.button.is-primary.is-hovered, .button.is-primary:hover {
+    background-color: #ad3d24;
+    color: #fff5e9;
+}
+
+.button.is-primary.is-focused:not(:active), .button.is-primary:focus:not(:active) {
+    box-shadow: 0 0 0 .125em rgba(206, 75, 45, 0.25);
+}
+
+.button.is-primary.is-light {
+    background-color: #fff5e9;
+    color: #ce4b2d;
+}
+
+.button.is-link {
+    background-color: #dba833;
+    color: #fff5e9;
+}
+
+.button.is-link.is-light {
+    background-color: #fff5e9;
+    color: #dba833;
+}
+
+.box {
+    background-color: #ffecce;
+}
+
+.title {
+    color: #d4d1c3;
+}
+
+.box .title {
+    color: #411910;
+}
+.subtitle {
+    color: #d4d1c3;
+}
+
+.input, .select select, .textarea {
+    background-color: #fff5e9;
+    border-color: rgba(65, 25, 16, 0.33);
+    border-radius: 4px;
+    color: #411910;
+}
+
+.input::placeholder, .select select::placeholder, .textarea::placeholder {
+    color: rgba(65, 25, 16, 0.33);
+}
+
+.control.has-icons-left .icon, .control.has-icons-right .icon {
+    color: rgba(65, 25, 16, 0.33);
+}
+
+a {
+    color: #ce4b2d;
+}
+
+.section {
+    padding-top: 0;
+}
+
+/* color palette */
+
+.newWhite { color: #fff5e9; }
+.newLightGray { color: rgba(65, 25, 16, 0.33); }
+.color1 { color: #83B8AA; }
+.color2 { color: #dba833; }
+.color3 { color: #d76b2b; }
+.color4 { color: #ce4b2d; }
+.color5 { color: #411910; }

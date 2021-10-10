@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chacri: Kea's Swoole Chat!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <div class="columns" id="app">
+                <div v-show="!connected" class="is-offset-3 is-6 column">
+                    <h1 class="title">Chacri: where the chatting is a show 🍿</h1>
+
+                    <Login v-bind:connected="connected" @logged-in="connect"></Login>
+                </div>
+                <div v-show="connected" style="display: none" class="is-12 column columns">
+                    <div class="sidebar is-2 column">
+                        <h1 class="title">Chacri 🍿</h1>
+                        <h2>Channels</h2>
+                        <ul>
+                            <li># General</li>
+                        </ul>
+                    </div>
+                    <div class="is-8 column channel-content pl-0 pr-0">
+                        <div>
+                            <h2 class="channel-title p-3"># General</h2>
+                        </div>
+                        <div class="messages p-3" ref="messages">
+                            <div
+                                    v-for="msg in messages"
+                                    :key="msg.id"
+                                    class="is-flex is-flex-direction-row mb-4"
+                                    :class="{ self: currentUser.id === msg.senderId }"
+                            >
+                                <figure class="image is-48x48 is-align-self-flex-start">
+                                    <img :src="avatar(msg.senderId)" alt="avatar"/>
+                                </figure>
+                                <div class="text">
+                                    <div class="chatfield p-2">
+                                        <div>
+                                            <span class="username">{{ username(msg.senderId) }}</span>
+                                            <span class="date">{{ createdAt(msg.createdAt) }}</span>
+                                        </div>
+                                        <div v-html="convertToLink(msg.message)"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form v-on:submit.prevent="sendMessage" autocomplete="off" class="message-form p-3">
+                            <div class="field has-addons">
+                                <div class="control is-expanded has-icons-left">
+                                    <input id="ChatRoomMessageInput" class="input is-medium" type="text"
+                                           placeholder="Enter message" v-model="message"/>
+                                    <span class="icon is-medium is-left">
+                                    <i class="fas fa-keyboard"></i>
+                                </span>
+                                </div>
+                                <div class="control">
+                                    <button id="ChatRoomSendBtn" class="button is-medium is-primary">
+                                        Send&nbsp;&nbsp;
+                                        <span class="icon is-medium"><i class="fas fa-paper-plane"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sidebar is-2 column">
+                        <div class="subtitle">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user" style="font-size: 0.8em; color: gray"></i>
+                            </span>
+                            <span v-text="currentUser.username"></span>
+                        </div>
+                        <div class="subtitle">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-users" style="font-size: 0.8em; color: gray"></i>
+                            </span>
+                            <span v-text="onlineUsersCount"></span> Online Users
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-toast-notification@2"></script>
+<link href="https://cdn.jsdelivr.net/npm/vue-toast-notification@2/dist/theme-sugar.css" rel="stylesheet">
+
+<script src="/js/app.js"></script>
+<script src="/js/Signup.js"></script>
+<script src="/js/Login.js"></script>
+<script>
+    const mountedApp = app.mount('#app')
+</script>
+</body>
+</html>
