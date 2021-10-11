@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri;
+namespace Kea\Chacree;
 
-use Kea\Chacri\Command\SendMessage;
+use Kea\Chacree\Command\SendMessage;
 
 class Message implements \JsonSerializable
 {

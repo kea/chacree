@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Exception;
+namespace Kea\Chacree\Exception;
 
 final class BadRequest extends \Exception
 {

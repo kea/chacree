@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Repository;
+namespace Kea\Chacree\Repository;
 
-use Kea\Chacri\Authentication\Credentials;
-use Kea\Chacri\User;
+use Kea\Chacree\Authentication\Credentials;
+use Kea\Chacree\User;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
 use Ramsey\Uuid\Uuid;

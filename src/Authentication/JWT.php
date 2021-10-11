@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Authentication;
+namespace Kea\Chacree\Authentication;
 
 use DateTimeImmutable;
-use Kea\Chacri\Exception\InvalidToken;
+use Kea\Chacree\Exception\InvalidToken;
 use Lcobucci\Clock\SystemClock;
 use Lcobucci\JWT\Configuration;
 use Lcobucci\JWT\Signer\Eddsa;

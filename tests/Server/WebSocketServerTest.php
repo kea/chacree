@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Server;
+namespace Kea\Chacree\Server;
 
-use Kea\Chacri\Authentication\JWT;
-use Kea\Chacri\Authentication\UsernameAndPasswordAuthenticator;
-use Kea\Chacri\Command\CommandFactory;
-use Kea\Chacri\Command\CommandHandler;
-use Kea\Chacri\Command\CommandHandlerFactory;
-use Kea\Chacri\Command\SendMessage;
-use Kea\Chacri\Repository\Connections;
-use Kea\Chacri\Repository\Users;
-use Kea\Chacri\Response\MultiClientResponse;
-use Kea\Chacri\User;
-use Kea\Chacri\UsersOnlineCount;
+use Kea\Chacree\Authentication\JWT;
+use Kea\Chacree\Authentication\UsernameAndPasswordAuthenticator;
+use Kea\Chacree\Command\CommandFactory;
+use Kea\Chacree\Command\CommandHandler;
+use Kea\Chacree\Command\CommandHandlerFactory;
+use Kea\Chacree\Command\SendMessage;
+use Kea\Chacree\Repository\Connections;
+use Kea\Chacree\Repository\Users;
+use Kea\Chacree\Response\MultiClientResponse;
+use Kea\Chacree\User;
+use Kea\Chacree\UsersOnlineCount;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 use Swoole\Http\Request;
@@ -23,13 +23,13 @@ use Swoole\WebSocket\Frame;
 use Swoole\WebSocket\Server;
 
 /**
- * @covers \Kea\Chacri\Server\WebSocketServer
+ * @covers \Kea\Chacree\Server\WebSocketServer
  */
 class WebSocketServerTest extends TestCase
 {
     /**
-     * @covers \Kea\Chacri\Response\MultiClientResponse
-     * @covers \Kea\Chacri\Command\SendMessage::__construct
+     * @covers \Kea\Chacree\Response\MultiClientResponse
+     * @covers \Kea\Chacree\Command\SendMessage::__construct
      */
     public function testReceiveTheSendMessageCommand(): void
     {
@@ -62,9 +62,9 @@ class WebSocketServerTest extends TestCase
     }
 
     /**
-     * @covers \Kea\Chacri\User::__construct
-     * @covers \Kea\Chacri\Authentication\Credentials
-     * @covers \Kea\Chacri\Controller\DefaultController
+     * @covers \Kea\Chacree\User::__construct
+     * @covers \Kea\Chacree\Authentication\Credentials
+     * @covers \Kea\Chacree\Controller\DefaultController
      */
     public function testCreateJWT()
     {

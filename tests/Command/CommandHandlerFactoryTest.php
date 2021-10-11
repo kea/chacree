@@ -1,18 +1,18 @@
 <?php
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Kea\Chacri\Command\CommandHandlerFactory
+ * @covers Kea\Chacree\Command\CommandHandlerFactory
  */
 class CommandHandlerFactoryTest extends TestCase
 {
     /**
      * @dataProvider provideCommand
      * @param Command $command
-     * @throws \Kea\Chacri\Exception\BadRequest
+     * @throws \Kea\Chacree\Exception\BadRequest
      */
     public function testBuild(Command $command)
     {

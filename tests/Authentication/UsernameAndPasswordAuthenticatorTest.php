@@ -1,20 +1,20 @@
 <?php
 
-namespace Kea\Chacri\Authentication;
+namespace Kea\Chacree\Authentication;
 
-use Kea\Chacri\Exception\Unauthorized;
-use Kea\Chacri\Repository\Users;
-use Kea\Chacri\User;
+use Kea\Chacree\Exception\Unauthorized;
+use Kea\Chacree\Repository\Users;
+use Kea\Chacree\User;
 use Lcobucci\JWT\UnencryptedToken;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Kea\Chacri\Authentication\UsernameAndPasswordAuthenticator
+ * @covers \Kea\Chacree\Authentication\UsernameAndPasswordAuthenticator
  */
 class UsernameAndPasswordAuthenticatorTest extends TestCase
 {
     /**
-     * @covers \Kea\Chacri\Authentication\Credentials
+     * @covers \Kea\Chacree\Authentication\Credentials
      */
     public function testAuthSearchUserOnRepository()
     {
@@ -34,7 +34,7 @@ class UsernameAndPasswordAuthenticatorTest extends TestCase
     }
 
     /**
-     * @covers \Kea\Chacri\User
+     * @covers \Kea\Chacree\User
      */
     public function testCreateTokenIsProxyToJWT()
     {

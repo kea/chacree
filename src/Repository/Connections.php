@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Repository;
+namespace Kea\Chacree\Repository;
 
-use Kea\Chacri\User;
+use Kea\Chacree\User;
 use Swoole\Table;
 use Swoole\WebSocket\Server;
 

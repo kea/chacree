@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
-use Kea\Chacri\Repository\Connections;
+use Kea\Chacree\Repository\Connections;
 use Ramsey\Uuid\Uuid;
 use Swoole\WebSocket\Frame;
 

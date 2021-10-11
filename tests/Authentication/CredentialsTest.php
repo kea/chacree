@@ -1,12 +1,12 @@
 <?php
 
-namespace Kea\Chacri\Authentication;
+namespace Kea\Chacree\Authentication;
 
 use PHPUnit\Framework\TestCase;
 use Swoole\Http\Request;
 
 /**
- * @covers \Kea\Chacri\Authentication\Credentials
+ * @covers \Kea\Chacree\Authentication\Credentials
  */
 class CredentialsTest extends TestCase
 {

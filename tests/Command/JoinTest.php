@@ -1,11 +1,11 @@
 <?php
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Kea\Chacri\Command\Join
+ * @covers Kea\Chacree\Command\Join
  */
 class JoinTest extends TestCase
 {

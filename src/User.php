@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri;
+namespace Kea\Chacree;
 
 class User implements \JsonSerializable
 {

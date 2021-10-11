@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri;
+namespace Kea\Chacree;
 
 use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
     /**
-     * @covers \Kea\Chacri\User
+     * @covers \Kea\Chacree\User
      */
     public function testFromArray(): void
     {
@@ -24,7 +24,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * @covers \Kea\Chacri\User
+     * @covers \Kea\Chacree\User
      */
     public function testHashedPasswordIsStoredAsIs(): void
     {
@@ -36,7 +36,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * @covers \Kea\Chacri\User
+     * @covers \Kea\Chacree\User
      */
     public function testPlainPasswordIsHashed(): void
     {
@@ -48,7 +48,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * @covers \Kea\Chacri\User
+     * @covers \Kea\Chacree\User
      */
     public function testMatchPassword(): void
     {

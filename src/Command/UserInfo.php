@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
 class UserInfo implements Command
 {

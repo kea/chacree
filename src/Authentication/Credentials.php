@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Authentication;
+namespace Kea\Chacree\Authentication;
 
 use Swoole\Http\Request;
 

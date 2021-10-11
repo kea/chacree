@@ -2,3 +2,4 @@
 /vendor
 /tools
 /certs
+.php-cs-fixer.cache

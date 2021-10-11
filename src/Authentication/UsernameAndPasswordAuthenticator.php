@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Authentication;
+namespace Kea\Chacree\Authentication;
 
-use Kea\Chacri\Exception\InvalidToken;
-use Kea\Chacri\Exception\Unauthorized;
-use Kea\Chacri\Repository\Users;
-use Kea\Chacri\User;
+use Kea\Chacree\Exception\InvalidToken;
+use Kea\Chacree\Exception\Unauthorized;
+use Kea\Chacree\Repository\Users;
+use Kea\Chacree\User;
 use Lcobucci\JWT\UnencryptedToken;
 
 class UsernameAndPasswordAuthenticator

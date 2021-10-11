@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
 use Exception;
-use Kea\Chacri\Exception\BadRequest;
-use Kea\Chacri\Repository\Users;
-use Kea\Chacri\Response\MultiClientResponse;
-use Kea\Chacri\Response\UserInfo as UserInfoResponse;
-use Kea\Chacri\User;
+use Kea\Chacree\Exception\BadRequest;
+use Kea\Chacree\Repository\Users;
+use Kea\Chacree\Response\MultiClientResponse;
+use Kea\Chacree\Response\UserInfo as UserInfoResponse;
+use Kea\Chacree\User;
 
 class UserInfoCommandHandler implements CommandHandler
 {

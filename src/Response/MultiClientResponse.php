@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Response;
+namespace Kea\Chacree\Response;
 
 use ArrayObject;
 use Traversable;

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Controller;
+namespace Kea\Chacree\Controller;
 
-use Kea\Chacri\Authentication\Credentials;
-use Kea\Chacri\Authentication\UsernameAndPasswordAuthenticator;
-use Kea\Chacri\Exception\InvalidToken;
-use Kea\Chacri\Repository\Users;
+use Kea\Chacree\Authentication\Credentials;
+use Kea\Chacree\Authentication\UsernameAndPasswordAuthenticator;
+use Kea\Chacree\Exception\InvalidToken;
+use Kea\Chacree\Repository\Users;
 use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
 use Swoole\Http\Response;

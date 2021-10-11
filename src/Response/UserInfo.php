@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Response;
+namespace Kea\Chacree\Response;
 
-use Kea\Chacri\User;
+use Kea\Chacree\User;
 
 class UserInfo implements \JsonSerializable
 {

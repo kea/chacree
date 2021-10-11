@@ -1,14 +1,14 @@
 <?php
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
-use Kea\Chacri\Repository\Connections;
+use Kea\Chacree\Repository\Connections;
 use PHPUnit\Framework\TestCase;
 use Swoole\WebSocket\Frame;
 
 /**
- * @covers Kea\Chacri\Command\CommandFactory
- * @covers Kea\Chacri\Command\SendMessage
+ * @covers Kea\Chacree\Command\CommandFactory
+ * @covers Kea\Chacree\Command\SendMessage
  */
 class CommandFactoryTest extends TestCase
 {

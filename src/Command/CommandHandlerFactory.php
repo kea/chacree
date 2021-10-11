@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
-use Kea\Chacri\Exception\BadRequest;
+use Kea\Chacree\Exception\BadRequest;
 
 class CommandHandlerFactory
 {

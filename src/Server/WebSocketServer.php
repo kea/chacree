@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Server;
+namespace Kea\Chacree\Server;
 
-use Kea\Chacri\Authentication\UsernameAndPasswordAuthenticator;
-use Kea\Chacri\Command\CommandFactory;
-use Kea\Chacri\Controller\DefaultController;
-use Kea\Chacri\Exception\InvalidToken;
-use Kea\Chacri\Repository\Connections;
-use Kea\Chacri\Command\CommandHandlerFactory;
-use Kea\Chacri\Repository\Users;
-use Kea\Chacri\Response\MultiClientResponse;
-use Kea\Chacri\UsersOnlineCount;
+use Kea\Chacree\Authentication\UsernameAndPasswordAuthenticator;
+use Kea\Chacree\Command\CommandFactory;
+use Kea\Chacree\Controller\DefaultController;
+use Kea\Chacree\Exception\InvalidToken;
+use Kea\Chacree\Repository\Connections;
+use Kea\Chacree\Command\CommandHandlerFactory;
+use Kea\Chacree\Repository\Users;
+use Kea\Chacree\Response\MultiClientResponse;
+use Kea\Chacree\UsersOnlineCount;
 use Psr\Log\LoggerAwareTrait;
 use Swoole\Http\Request;
 use Swoole\Http\Response;

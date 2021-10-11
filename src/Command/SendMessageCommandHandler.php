@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
 use Exception;
-use Kea\Chacri\Message;
-use Kea\Chacri\Repository\Connections;
-use Kea\Chacri\Repository\Messages;
-use Kea\Chacri\Response\MultiClientResponse;
+use Kea\Chacree\Message;
+use Kea\Chacree\Repository\Connections;
+use Kea\Chacree\Repository\Messages;
+use Kea\Chacree\Response\MultiClientResponse;
 
 class SendMessageCommandHandler implements CommandHandler
 {

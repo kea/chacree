@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
-use Kea\Chacri\Response\MultiClientResponse;
+use Kea\Chacree\Response\MultiClientResponse;
 
 interface CommandHandler
 {

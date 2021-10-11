@@ -1,11 +1,11 @@
 <?php
 
-namespace Kea\Chacri\Command;
+namespace Kea\Chacree\Command;
 
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Kea\Chacri\Command\SendMessage
+ * @covers Kea\Chacree\Command\SendMessage
  */
 class SendMessageTest extends TestCase
 {

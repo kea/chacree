@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kea\Chacri\Repository;
+namespace Kea\Chacree\Repository;
 
-use Kea\Chacri\Message;
+use Kea\Chacree\Message;
 use Swoole\Table;
 
 class Messages extends Table

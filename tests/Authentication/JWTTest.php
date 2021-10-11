@@ -1,14 +1,14 @@
 <?php
 
-namespace Kea\Chacri\Authentication;
+namespace Kea\Chacree\Authentication;
 
-use Kea\Chacri\Exception\InvalidToken;
+use Kea\Chacree\Exception\InvalidToken;
 use Lcobucci\JWT\Signer\Key\InMemory;
 use Lcobucci\JWT\UnencryptedToken;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers Kea\Chacri\Authentication\JWT
+ * @covers Kea\Chacree\Authentication\JWT
  */
 class JWTTest extends TestCase
 {
@@ -25,7 +25,7 @@ class JWTTest extends TestCase
     }
 
     /**
-     * @covers \Kea\Chacri\Exception\InvalidToken;
+     * @covers \Kea\Chacree\Exception\InvalidToken;
      */
     public function testDecryptInvalidToken()
     {
