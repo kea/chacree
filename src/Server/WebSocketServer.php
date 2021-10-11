@@ -50,6 +50,8 @@ class WebSocketServer
         } catch (InvalidToken $e) {
             $this->logger?->warning("Client failed to connect: ".$e->getMessage());
             $server->disconnect($request->fd, SWOOLE_WEBSOCKET_CLOSE_POLICY_ERROR, "Unauthorized");
+
+            return;
         }
 
         $fd = (string)$request->fd;
