@@ -18,7 +18,8 @@ class CommandHandlerFactoryTest extends TestCase
     {
         $sendMessageHandler = $this->getMockBuilder(SendMessageCommandHandler::class)->disableOriginalConstructor()->getMock();
         $joinHandler = $this->getMockBuilder(JoinCommandHandler::class)->disableOriginalConstructor()->getMock();
-        $factory = new CommandHandlerFactory($sendMessageHandler, $joinHandler);
+        $userInfoHandler = $this->getMockBuilder(UserInfoCommandHandler::class)->disableOriginalConstructor()->getMock();
+        $factory = new CommandHandlerFactory($sendMessageHandler, $joinHandler, $userInfoHandler);
 
         $commandHandler = $factory->build($command);
         $this->assertInstanceOf(CommandHandler::class, $commandHandler);
@@ -29,6 +30,7 @@ class CommandHandlerFactoryTest extends TestCase
         return [
             [new SendMessage('1', 'm', '2', 143200800)],
             [new Join('1', '2', 'c', 143200800)],
+            [new UserInfo('1', 2)],
         ];
     }
 }
