@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Kea\Chacree\Controller;
 
+use InvalidArgumentException;
+use JsonException;
 use Kea\Chacree\Authentication\Credentials;
 use Kea\Chacree\Authentication\UsernameAndPasswordAuthenticator;
 use Kea\Chacree\Exception\InvalidToken;
@@ -78,15 +80,21 @@ final class DefaultController
     {
         try {
             $token = $this->authenticator->decryptToken($request->header['x-auth-token'] ?? '');
-        } catch (InvalidToken $e) {
+            $userId = $token->claims()->get('userId');
+            if ($userId === null) {
+                throw new InvalidArgumentException();
+            }
+
+            $user = $this->users->findById($userId);
+
+            $response->end(json_encode($user, JSON_THROW_ON_ERROR));
+        } catch (InvalidArgumentException) {
+            $response->status(400);
+        } catch (InvalidToken) {
             $response->status(403);
-
-            return;
+        } catch (JsonException) {
+            $response->status(500);
         }
-        $userId = $token->claims()->get('userId');
-        $user = $this->users->findById($userId);
-
-        $response->end(json_encode($user, JSON_THROW_ON_ERROR));
     }
 
     private function clientPage(Response $response): void
