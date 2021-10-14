@@ -12,7 +12,7 @@ class User implements \JsonSerializable
         private string $password,
         private string $avatar = ''
     ) {
-        /** @var @todo assert not empty id, username, password */
+        /** @todo assert not empty id, username, password */
 
         $passwordInfo = password_get_info($password);
         if ($passwordInfo['algo'] === null) {
