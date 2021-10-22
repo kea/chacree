@@ -10,6 +10,7 @@ prompt = no
 encrypt_key = no
 distinguished_name = dn
 req_extensions = req_ext
+extendedKeyUsage=serverAuth
 
 [ dn ]
 C = $COUNTRY
